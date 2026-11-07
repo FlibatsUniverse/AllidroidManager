@@ -33,8 +33,7 @@
 # Fix missing apksig annotations and fields
 -keep class com.android.apksig.internal.** { *; }
 
-# Fix LSPatch breaking
-# ref: https://github.com/LSPosed/LSPatch/blob/bbe8d93fb9230f7b04babaf1c4a11642110f55a6/manager/proguard-rules.pro#L12-L18
+# Keep patcher classes
 -keep class com.beust.jcommander.** { *; }
 -keep class org.lsposed.lspatch.Patcher$Options { *; }
 -keep class org.lsposed.lspatch.share.LSPConfig { *; }

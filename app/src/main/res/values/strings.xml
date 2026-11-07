@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">Vendetta Manager</string>
+    <string name="app_name">Allidroid Manager</string>
 
     <string name="cd_library_author">Author: %1$s</string>
     <string name="cd_library_license">License: %1$s</string>
@@ -14,7 +14,7 @@
     <string name="msg_loading">Loading…</string>
     <string name="msg_downgrade">Cannot downgrade, try uninstalling first</string>
     <string name="msg_unlocked">You are now a developer</string>
-    <string name="msg_permission_grant">In order for Vendetta Manager to function, file permissions are required. Since shared data is stored in ~/Vendetta, permissions are required in order to access it.</string>
+    <string name="msg_permission_grant">In order for Allidroid Manager to function, file permissions are required. Since shared data is stored in ~/Allidroid, permissions are required in order to access it.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>
     <string name="msg_change_mirror">Would you like to try again using a download mirror?</string>
     <string name="msg_invalid_apk">APK was corrupted, try clearing cache then reinstalling</string>
@@ -31,11 +31,11 @@
     <string name="step_dl_lib">Downloading libraries apk</string>
     <string name="step_dl_lang">Downloading language apk</string>
     <string name="step_dl_res">Downloading resources apk</string>
-    <string name="step_dl_vd">Downloading Vendetta module</string>
+    <string name="step_dl_vd">Downloading Allidroid module</string>
 
     <string name="step_change_icon">Changing app icon</string>
     <string name="step_patch_manifests">Patching app manifests</string>
-    <string name="step_add_vd">Injecting Vendetta</string>
+    <string name="step_add_vd">Injecting Allidroid</string>
 
     <string name="step_signing">Signing APKs</string>
     <string name="step_installing">Installing APKs</string>
@@ -73,7 +73,7 @@
     <string name="action_reload">Reload</string>
     <string name="action_open_about">Open about</string>
     <string name="action_open_settings">Open settings</string>
-    <string name="action_tap_to_install">Tap to install Vendetta for Discord %1$s</string>
+    <string name="action_tap_to_install">Tap to install Allidroid for Discord %1$s</string>
     <string name="action_confirm_exit">Exit anyways</string>
     <string name="action_dismiss_nevermind">Nevermind</string>
     <string name="action_dismiss_no_thanks">No thanks</string>
@@ -125,10 +125,10 @@
     <string name="settings_check_updates">Check for Discord updates</string>
 
     <string name="settings_customization">Customization</string>
-    <string name="settings_customization_description">Customize your Vendetta install</string>
+    <string name="settings_customization_description">Customize your Allidroid install</string>
     <string name="settings_app_name">App name</string>
     <string name="settings_app_icon">Replace app icon</string>
-    <string name="settings_app_icon_description">Uses the Vendetta icon instead of Discord\'s</string>
+    <string name="settings_app_icon_description">Uses the Allidroid icon instead of Discord\'s</string>
 
     <string name="settings_advanced">Advanced</string>
     <string name="settings_advanced_description">Modify downloading and installation</string>
@@ -150,13 +150,13 @@
     <string name="settings_logs_alternate_lines">Alternate lines</string>
     <string name="settings_logs_line_wrap">Wrap lines</string>
 
-    <string name="update_description">Vendetta Manager version %1$s is now available!</string>
+    <string name="update_description">Allidroid Manager version %1$s is now available!</string>
 
     <string name="channel_stable">Stable</string>
     <string name="channel_beta">Beta</string>
     <string name="channel_alpha">Alpha</string>
 
-    <string name="label_github">Github</string>
+    <string name="label_github">GitHub</string>
     <string name="label_discord">Discord</string>
     <string name="label_team">Team</string>
     <string name="label_special_thanks">Special thanks</string>
@@ -168,4 +168,49 @@
     <string name="install_method">Install method</string>
     <string name="default_installer">PackageManager (recommended)</string>
     <string name="shizuku_installer">Shizuku</string>
+    <string name="battery_opt_title">Battery Optimization</string>
+    <string name="battery_opt_description">Disabling battery optimization is required to keep downloads running reliably in the background or when the screen is off.</string>
+    <string name="battery_opt_confirm">Allow</string>
+    <string name="battery_opt_dismiss">Later</string>
+    <string name="battery_opt_error">Could not open battery optimization settings.</string>
+    <string name="msg_downgrade_disallowed">Cannot downgrade, try uninstalling first</string>
+    <string name="msg_try_again">Would you like to try again?</string>
+    <string name="settings_allow_downgrade">Allow downgrading</string>
+    <string name="settings_allow_downgrade_description">Bypass the downgrade check by Allidroid Manager, useful if your device already allows downgrading through root</string>
+    <string name="step_add_mod">Injecting Allidroid</string>
+    <string name="step_dl_mod">Downloading Allidroid</string>
+    <string name="mirror_default">Default</string>
+    <string name="permissions_grant_title">Grant Permissions</string>
+    <string name="install_permissions_grant_body">Installing Allidroid requires granting permission to install apps from unknown sources.</string>
+    <string name="action_continue">Continue</string>
+    <string name="dont_show_again">Don&#8217;t show this again</string>
+    <string name="network_warning_title">Metered network</string>
+    <string name="network_warning_body">It appears you are connected to mobile data or a metered network. Continuing will download a large amount of data, which may cost you.</string>
+    <string name="play_protect_warning_title">Play Protect</string>
+    <string name="play_protect_warning_desc">Google Play Protect appears to be enabled on your device. It may try to block or remove Allidroid while it installs. You can disable it temporarily if that happens.</string>
+    <string name="play_protect_warning_open_gpp">Open Play Protect</string>
+    <string name="settings_pitch_black">Pitch black</string>
+    <string name="settings_pitch_black_description">Use a pure black background in the dark theme</string>
+    <string name="app_description">The mobile version of Allicord, by Alliance.</string>
+    <string name="label_website">Website</string>
+    <string name="home_installations">Installations</string>
+    <string name="home_no_installations">No installations found!</string>
+    <string name="home_commits">Commits</string>
+    <string name="about_manager_title">About Manager</string>
+    <string name="about_vendetta_lead">Vendetta Lead</string>
+    <string name="about_allidroid_lead">Allidroid Lead</string>
+    <string name="about_contributors">Contributors</string>
+    <string name="about_contributions">%s contributions</string>
+    <string name="about_source_code">Source code</string>
+    <string name="action_open_logs">Open logs</string>
+    <string name="logs_title">Logs</string>
+    <string name="logs_none">No logs present!</string>
+    <string name="logs_delete_all">Delete all logs</string>
+    <string name="logs_wipe_title">Clear logs</string>
+    <string name="logs_wipe_description">Are you sure you want to permanently delete all the logs?</string>
+    <string name="logs_deleted">Deleted all logs</string>
+    <string name="logs_share">Share log</string>
+    <string name="logs_copy">Copy log</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
 </resources>

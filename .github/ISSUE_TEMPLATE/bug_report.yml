@@ -1,0 +1,85 @@
+name: Bug/Crash Report
+description: Create a bug or crash report for Allidroid Manager.
+labels: [bug]
+title: "[Bug] <title>"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        GitHub Issues are for development, not support!
+
+        If you are having trouble installing Allidroid, or just have a question, head to our [Discord server](https://discord.com/invite/XszKXdqaZP) instead.
+
+        This form is only for bugs in Allidroid Manager, the app that installs and updates Allidroid. Problems inside Allidroid itself go in the [Allidroid repository](https://github.com/FlibatsUniverse/Allidroid/issues), and problems with Allicord on desktop and web go in the [Allicord repository](https://github.com/FlibatsUniverse/Allicord/issues).
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: What happens when the bug or crash occurs?
+      description: Where does this bug or crash occur, when does it occur, etc.
+      placeholder: The manager crashes when I tap ... on the ... screen. I think it happens because of ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What is the expected behavior?
+      description: Simply detail what the expected behavior is.
+      placeholder: I expect the manager to open the ... screen instead of ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-take
+    attributes:
+      label: How do you recreate this bug or crash?
+      description: Give us a list of steps in order to recreate the bug or crash.
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. Observe "the bug" or "the crash"
+    validations:
+      required: true
+
+  - type: input
+    id: manager-version
+    attributes:
+      label: Manager version
+      description: Shown on the About Manager screen.
+      placeholder: v1.1.23 (1123)
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Pixel 8, Android 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: install-log
+    attributes:
+      label: Install log
+      description: If this happened during an install, open Logs in the manager, share the log, and paste it between the "```".
+      value: |
+        ```
+        Replace this text with your log.
+        ```
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agreement-check
+    attributes:
+      label: Request Agreement
+      options:
+        - label: I've searched existing issues and this hasn't been reported before
+        - label: I am using the latest release of Allidroid Manager
+        - label: This is not a support request
+        - label: I understand that if any of the above conditions are not met, this issue will be deleted and I will be banned from creating future issues without further warning
+          required: true
+        - label: I am willing to submit a fix for this myself

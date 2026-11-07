@@ -1,29 +1,30 @@
 [versions]
 # Plugins
-agp = "8.2.2"
-kotlin = "1.9.21"
+agp = "8.13.2"
+kotlin = "2.2.20"
 
 # AndroidX
-androidx-core-ktx = "1.12.0"
+androidx-core-ktx = "1.15.0"
 androidx-core-splashscreen = "1.0.1"
-androidx-lifecycle-runtime = "2.7.0"
-androidx-paging-compose = "3.2.1"
+androidx-lifecycle-runtime = "2.8.7"
+androidx-paging-compose = "3.3.2"
 androidx-work-runtime = "2.9.0"
 
 # Compose
-compose-activity = "1.8.2"
-compose-bom = "2023.10.01"
+compose-activity = "1.11.0"
+compose-bom = "2026.03.01"
 
 # Misc.
 aboutlibraries = "10.10.0"
-accompanist = "0.33.2-alpha"
-coil = "2.4.0"
-koin = "3.4.0"
+accompanist = "0.37.3"
+binary-resources = "2.0.0"
+coil = "2.7.0"
+koin = "3.5.6"
 kotlinx-datetime = "0.5.0"
 kotlinx-collections = "0.3.7"
-ktor = "2.3.3"
+ktor = "2.3.12"
 shizuku = "13.1.0"
-voyager = "1.1.0-alpha02"
+voyager = "1.1.0-beta03"
 zip-android = "2.1.1"
 
 [libraries]
@@ -47,7 +48,7 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 # Compose
 compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.5.0-alpha18" }
 compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
@@ -60,7 +61,7 @@ koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"
 
 # Ktor
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
-ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
@@ -80,15 +81,16 @@ voyager-koin = { group = "cafe.adriel.voyager", name = "voyager-koin", version.r
 aboutlibraries-core = { group = "com.mikepenz", name = "aboutlibraries", version.ref = "aboutlibraries" }
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinx-collections" }
+binaryResources = { module = "com.aliucord:binary-resources", version.ref = "binary-resources" }
 zip-android = { group = "io.github.diamondminer88", name = "zip-android", version.ref = "zip-android" }
 
 [bundles]
-accompanist = ["accompanist-pager", "accompanist-permissions", "accompanist-systemuicontroller"]
+accompanist = ["accompanist-permissions"]
 androidx = ["androidx-work-runtime", "androidx-paging-compose", "androidx-lifecycle-runtime", "androidx-core-splashscreen", "androidx-core-ktx"]
 coil = ["coil", "coil-compose"]
 compose = ["compose-activity", "compose-material-icons-extended", "compose-material3", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview"]
 koin = ["koin-android", "koin-androidx-compose", "koin-core"]
-ktor = ["ktor-client-cio", "ktor-client-content-negotiation", "ktor-client-core", "ktor-client-logging", "ktor-serialization-kotlinx-json"]
+ktor = ["ktor-client-okhttp", "ktor-client-content-negotiation", "ktor-client-core", "ktor-client-logging", "ktor-serialization-kotlinx-json"]
 shizuku = ["shizuku-api", "shizuku-provider"]
 voyager = ["voyager-koin", "voyager-navigator", "voyager-tab-navigator", "voyager-transitions", "voyager-screenmodel"]
 
@@ -98,3 +100,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

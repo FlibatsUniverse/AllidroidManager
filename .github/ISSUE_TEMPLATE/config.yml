@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and questions
+    url: https://discord.com/invite/XszKXdqaZP
+    about: Ask questions and get help in our Discord server.
+  - name: Allidroid
+    url: https://github.com/FlibatsUniverse/Allidroid/issues
+    about: Report problems with Allidroid itself in its own repository.
+  - name: Allicord
+    url: https://github.com/FlibatsUniverse/Allicord/issues
+    about: Report problems with Allicord on desktop and web in its own repository.

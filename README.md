@@ -1,64 +1,52 @@
-<div align="center">
+# [<img src="./assets/alliance.svg" width="40" align="left" alt="Allidroid Manager">](https://github.com/FlibatsUniverse/AllidroidManager) Allidroid Manager
 
-  <img src="images/vendetta_logo.png" alt="Vendetta logo" width="200px" style="border-radius: 50%" />
-  
-  # Vendetta Manager
+[![Version](https://img.shields.io/github/v/release/FlibatsUniverse/AllidroidManager?include_prereleases&style=for-the-badge&logo=github&logoColor=caa7f5&label=&color=caa7f5&labelColor=101018)](https://github.com/FlibatsUniverse/AllidroidManager/releases/latest)
+[![Build](https://img.shields.io/github/actions/workflow/status/FlibatsUniverse/AllidroidManager/build.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=caa7f5&label=Build&labelColor=101018)](https://github.com/FlibatsUniverse/AllidroidManager/actions/workflows/build.yml)
+[![License](https://img.shields.io/badge/License-OSL--3.0-caa7f5?style=for-the-badge&logo=opensourceinitiative&logoColor=caa7f5&labelColor=101018)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/FlibatsUniverse/AllidroidManager?style=for-the-badge&logo=github&logoColor=caa7f5&color=caa7f5&labelColor=101018)](https://github.com/FlibatsUniverse/AllidroidManager/stargazers)
+[![Discord](https://img.shields.io/badge/Discord-Join-caa7f5?style=for-the-badge&logo=discord&logoColor=caa7f5&labelColor=101018)](https://discord.com/invite/XszKXdqaZP)
 
-  Easily install Vendetta on Android
+Install and update [Allidroid](https://github.com/FlibatsUniverse/Allidroid), the mobile version of [Allicord](https://github.com/FlibatsUniverse/Allicord), by Alliance.
 
-  [![Latest release](https://img.shields.io/github/v/release/vendetta-mod/VendettaManager?color=3AB8BA&display_name=release&label=Latest&style=for-the-badge)](https://github.com/vendetta-mod/VendettaManager/releases/latest)
-  
-  ---
+## Features
 
-  <br>
+- Installs and updates Allidroid on Android without root, straight from the app
+- Downloads the latest Discord, patches it, and installs the result for you
+- Update notifications for Discord and for the manager itself
+- Saved install logs you can open, copy, share, or delete
+- Warns you before a large download on mobile data and when Play Protect might interfere
+- Material 3 Expressive design with dynamic color, the Alliance palette, and light, dark, and pitch black themes
+- Optional Shizuku installer, plus a downgrade option for devices that allow it
 
-  ![Debug build status](https://img.shields.io/github/actions/workflow/status/vendetta-mod/VendettaManager/build-debug.yml?label=Debug%20Build&logo=github&style=for-the-badge&branch=main)
-  [![Stars](https://img.shields.io/github/stars/vendetta-mod/VendettaManager?logo=github&style=for-the-badge)](https://github.com/vendetta-mod/VendettaManager/stargazers)
-  [![Discord](https://img.shields.io/discord/1015931589865246730?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/n9QQ4XhhJP)
-  
-  <br>
-  
-  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/vendetta-mod/VendettaManager?logo=github&logoColor=%23fff&style=for-the-badge)
-  ![Downloads (latest)](https://img.shields.io/github/downloads/vendetta-mod/VendettaManager/latest/total?style=for-the-badge&logo=github&label=Downloads%20(Latest)&color=blue)
-  ![Total downloads](https://img.shields.io/github/downloads/vendetta-mod/VendettaManager/total?style=for-the-badge&logo=github&label=Downloads%20(Total)&color=blue)
-  ![GitHub top language](https://img.shields.io/github/languages/top/vendetta-mod/VendettaManager?style=for-the-badge)
-
-  <br>
-
-  <img src="images/screenshot_home.jpg" width="200px">
-  
-</div>
-
-Build
----
+## Instructions
 
 #### Prerequisites
-  - [Git](https://git-scm.com/downloads)
-  - [JDK 17](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
-  - [Android SDK](https://developer.android.com/studio)
 
-#### Instructions
+- [Git](https://git-scm.com/downloads)
+- [JDK 17](https://learn.microsoft.com/java/openjdk/download#openjdk-17)
+- [Android SDK](https://developer.android.com/studio) with platform 36
+
+#### Steps
 
 1. Clone the repo
-    - `git clone https://github.com/vendetta-mod/VendettaManager.git && cd VendettaManager`
-2. Build the project
-    - Linux: `chmod +x ./gradlew && gradlew assembleDebug`
+    - `git clone https://github.com/FlibatsUniverse/AllidroidManager.git && cd AllidroidManager`
+2. Point Gradle at your Android SDK by creating `local.properties` with `sdk.dir=<path to your SDK>`
+3. Build the project
+    - Linux: `chmod +x ./gradlew && ./gradlew assembleDebug`
     - Windows: `./gradlew assembleDebug`
-3. Install on device
-    - [Enable usb debugging](https://developer.android.com/studio/debug/dev-options) and plug in your phone
-    - Run `adb install app/build/outputs/apk/debug/app-debug.apk`
+4. Install on a device or emulator
+    - `adb install app/build/outputs/apk/debug/app-debug.apk`
 
-## Contributing
+## Credits
 
-This is an open-source project, you can do so without any programming.
+Allidroid Manager is made by Alliance Development, led by [Kuraa](https://github.com/ItzFlibat). Vendetta Lead: [Fiery](https://github.com/FieryFlames), [Maisy](https://github.com/maisymoe) and [Wing](https://github.com/wingio). Special thanks to [rushii](https://github.com/rushiiMachine) and [Xinto](https://github.com/X1nto).
 
-Here are a few things you can do:
+## Star History
 
-- [Test and report issues](https://github.com/vendetta-mod/VendettaManager/issues/new/choose)
-- [Translate the app into your language](https://crowdin.com/project/vendetta-manager)
-    
-License
----
-Vendetta is licensed under the Open Software License version 3.0
-
-[![License: OSL v3](https://img.shields.io/badge/License-OSL%20v3-blue.svg?style=for-the-badge)](https://github.com/vendetta-mod/VendettaManager/blob/main/LICENSE)
+<a href="https://star-history.com/#FlibatsUniverse/AllidroidManager&Timeline">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=FlibatsUniverse/AllidroidManager&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=FlibatsUniverse/AllidroidManager&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=FlibatsUniverse/AllidroidManager&type=Timeline" />
+  </picture>
+</a>

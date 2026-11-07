@@ -1,4 +1,3 @@
-import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
 import java.io.ByteArrayOutputStream
 
 plugins {
@@ -6,18 +5,31 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "dev.beefers.vendetta.manager"
-    compileSdk = 34
+    namespace = "com.flibatsuniverse.allidroid.manager"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "dev.beefers.vendetta.manager"
+        applicationId = "com.flibatsuniverse.allidroid.manager"
         minSdk = 28
         targetSdk = 34
         versionCode = 1123
         versionName = "1.1.23"
+
+        buildConfigField("String", "MOD_NAME", "\"Allidroid\"")
+        buildConfigField("String", "MANAGER_NAME", "\"AllidroidManager\"")
+        buildConfigField("String", "REPO", "\"FlibatsUniverse/Allidroid\"")
+        buildConfigField("String", "ORG_LINK", "\"https://github.com/FlibatsUniverse\"")
+        buildConfigField("String", "INVITE_LINK", "\"https://discord.com/invite/XszKXdqaZP\"")
+        buildConfigField("String", "WEBSITE_LINK", "\"https://alliance.flibat.com\"")
+        buildConfigField("String", "REPO_LINK", "\"https://github.com/FlibatsUniverse/AllidroidManager\"")
+        buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"com.flibatsuniverse.allidroid\"")
+        buildConfigField("int", "MODDED_APP_ICON", "0xFFCAA7F5")
+        buildConfigField("int", "MODDED_APP_ICON_ALPHA", "0xFFB889E8")
+        buildConfigField("int", "MODDED_APP_ICON_OTHER", "0xFF9A6BD0")
 
         buildConfigField("String", "GIT_BRANCH", "\"${getCurrentBranch()}\"")
         buildConfigField("String", "GIT_COMMIT", "\"${getLatestCommit()}\"")
@@ -47,22 +59,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlinOptions {
-        jvmTarget = "11"
-        freeCompilerArgs += listOf(
-            "-Xcontext-receivers",
-            "-P",
-            "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=${buildDir.resolve("report").absolutePath}",
-        )
-    }
-
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.6"
     }
 
     androidComponents {
@@ -92,6 +91,13 @@ android {
     }
 }
 
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+        freeCompilerArgs.add("-Xcontext-receivers")
+    }
+}
+
 dependencies {
     implementation(platform(libs.compose.bom))
 
@@ -106,6 +112,11 @@ dependencies {
 
     implementation(files("libs/lspatch.aar"))
     implementation(libs.aboutlibraries.core)
+    implementation(libs.binaryResources) {
+        exclude(module = "checker-qual")
+        exclude(module = "jsr305")
+        exclude(module = "guava")
+    }
     implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.collections)
     implementation(libs.zip.android) {

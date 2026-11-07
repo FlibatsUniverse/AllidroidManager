@@ -6,5 +6,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "Vendetta Manager"
+rootProject.name = "Allidroid Manager"
 include(":app")

@@ -6,11 +6,11 @@
 [![Stars](https://img.shields.io/github/stars/FlibatsUniverse/AllidroidManager?style=for-the-badge&logo=github&logoColor=caa7f5&color=caa7f5&labelColor=101018)](https://github.com/FlibatsUniverse/AllidroidManager/stargazers)
 [![Discord](https://img.shields.io/badge/Discord-Join-caa7f5?style=for-the-badge&logo=discord&logoColor=caa7f5&labelColor=101018)](https://discord.com/invite/XszKXdqaZP)
 
-Install and update [Allidroid](https://github.com/FlibatsUniverse/Allidroid), the mobile version of [Allicord](https://github.com/FlibatsUniverse/Allicord), by Alliance.
+Install and update [Allidroid](https://github.com/FlibatsUniverse/Allidroid), the mobile version of [Allicord](https://github.com/FlibatsUniverse/Allicord), the undisputed cutest Discord client mod.
 
 ## Features
 
-- Installs and updates Allidroid on Android without root, straight from the app
+- Installs and updates Allidroid without root, straight from the app
 - Downloads the latest Discord, patches it, and installs the result for you
 - Update notifications for Discord and for the manager itself
 - Saved install logs you can open, copy, share, or delete

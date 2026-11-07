@@ -17,7 +17,7 @@ android {
         minSdk = 28
         targetSdk = 34
         versionCode = 1123
-        versionName = "1.1.23"
+        versionName = "0.1.0"
 
         buildConfigField("String", "MOD_NAME", "\"Allidroid\"")
         buildConfigField("String", "MANAGER_NAME", "\"AllidroidManager\"")

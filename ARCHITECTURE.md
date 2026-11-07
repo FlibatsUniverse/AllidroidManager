@@ -1,6 +1,6 @@
 # Architecture
 
-Allidroid Manager is a single-module Android app written in Kotlin with Jetpack Compose and Material 3 Expressive. It downloads Discord, patches it with Allidroid (released from the Allidroid repository), and installs the result. The home screen shows recent commits from that repository.
+Allidroid Manager is a single-module app written in Kotlin with Jetpack Compose and Material 3 Expressive. It downloads Discord, patches it with Allidroid (released from the Allidroid repository), and installs the result. The home screen shows recent commits from that repository.
 
 Code lives in `app/src/main/java/com/flibatsuniverse/allidroid/manager`:
 

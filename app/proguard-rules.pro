@@ -41,6 +41,7 @@
 -keepclassmembers class org.lsposed.patch.LSPatch {
     private <fields>;
 }
+-keep class org.lsposed.patch.** { *; }
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.

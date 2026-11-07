@@ -2,6 +2,7 @@ package com.flibatsuniverse.allidroid.manager.installer.util
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import org.lsposed.patch.ApkPatcher
 import org.lsposed.patch.LSPatch
 import org.lsposed.patch.util.Logger
 import java.io.File
@@ -15,8 +16,7 @@ object Patcher {
         embeddedModules: List<String>
     ) {
         withContext(Dispatchers.IO) {
-            LSPatch(
-                logger,
+            val spec = LSPatch(
                 *apkPaths.toTypedArray(),
                 "-o",
                 outputDir.absolutePath,
@@ -30,7 +30,8 @@ object Patcher {
                 "password",
                 "alias",
                 "password"
-            ).doCommandLine()
+            ).toSpec()
+            ApkPatcher(logger, spec).patch()
         }
     }
 

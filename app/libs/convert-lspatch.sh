@@ -1,9 +1,9 @@
 # Download LSPatch jar and convert it to an aar
 # Jars cannot be used as a dependency without breaking R8 optimization
 
-# LSPatch with support for Android 16 and 17
+# LSPatch 1.2, the stable release. The October canary builds ship a native library and a loader that do not match.
 
-LSPATCH_URL="https://github.com/JingMatrix/LSPatch/releases/download/canary-492/lspatch-v1.2-492-release.jar"
+LSPATCH_URL="https://github.com/JingMatrix/LSPatch/releases/download/v1.2/lspatch-v1.2-487-release.jar"
 LSPATCH_FILE_NAME="lspatch"
 
 function cleanup {
@@ -25,6 +25,9 @@ cat >AndroidManifest.xml <<EOF
     <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="34" />
 </manifest>
 EOF
+
+# the patcher copies these native libraries into every app it patches, so they must come from the same build as the jar
+unzip -q -o $LSPATCH_FILE_NAME.jar "assets/lspatch/so/*" -d ../src/main
 
 # add everything to aar
 rm -f $LSPATCH_FILE_NAME.aar

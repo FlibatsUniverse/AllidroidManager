@@ -58,6 +58,11 @@ class InstallStep(
         }
 
         installer.installApks(silent = !isMiui, *files)
+
+        // The module that was embedded is the one that was downloaded, its version is the release it came from
+        context.packageManager.getPackageArchiveInfo(preferences.moduleLocation.absolutePath, 0)
+            ?.versionName
+            ?.let { preferences.installedModuleVersion = it }
     }
 
 }

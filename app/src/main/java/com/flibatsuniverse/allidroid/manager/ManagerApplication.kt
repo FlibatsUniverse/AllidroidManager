@@ -6,6 +6,8 @@ import android.app.NotificationManager
 import android.content.Context
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.flibatsuniverse.allidroid.manager.di.httpModule
 import com.flibatsuniverse.allidroid.manager.di.managerModule
@@ -37,6 +39,13 @@ class ManagerApplication : Application() {
         val prefs: PreferenceManager = get()
 
         if (prefs.updateDuration != UpdateCheckerDuration.DISABLED) {
+            // Look once right away, so a new version is announced soon after the app is opened
+            WorkManager.getInstance(applicationContext).enqueueUniqueWork(
+                "com.flibatsuniverse.allidroid.manager.UPDATE_CHECK_NOW",
+                ExistingWorkPolicy.KEEP,
+                OneTimeWorkRequestBuilder<UpdateWorker>().build()
+            )
+
             val duration = prefs.updateDuration
             WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork(
                 "com.flibatsuniverse.allidroid.manager.UPDATE_CHECK",
@@ -51,7 +60,7 @@ class ManagerApplication : Application() {
 
         val updates = NotificationChannel(
             "${BuildConfig.APPLICATION_ID}.notifications.UPDATE",
-            "Discord updates",
+            "Updates",
             NotificationManager.IMPORTANCE_DEFAULT
         )
 

@@ -26,6 +26,13 @@ class PreferenceManager(context: Context) :
 
     var moduleVersion by stringPreference("module_version", "")
 
+    /** The Allidroid release that was installed into Discord last, so a newer one can be announced. */
+    var installedModuleVersion by stringPreference("installed_module_version", "")
+
+    var notifiedManagerVersion by stringPreference("notified_manager_version", "")
+
+    var notifiedModuleVersion by stringPreference("notified_module_version", "")
+
     var patchIcon by booleanPreference("patch_icon", true)
 
     var debuggable by booleanPreference("debuggable", false)

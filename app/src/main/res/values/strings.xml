@@ -150,6 +150,9 @@
     <string name="settings_logs_alternate_lines">Alternate lines</string>
     <string name="settings_logs_line_wrap">Wrap lines</string>
 
+    <string name="title_manager_update">Allidroid Manager update</string>
+    <string name="title_allidroid_update">Allidroid update available</string>
+    <string name="text_allidroid_update">Version %1$s is out. Tap to open the manager and reinstall.</string>
     <string name="update_description">Allidroid Manager version %1$s is now available!</string>
 
     <string name="channel_stable">Stable</string>
